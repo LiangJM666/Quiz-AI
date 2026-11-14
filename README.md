@@ -4,4 +4,4 @@ Quiz AI 是一款面向中文用户的本地优先 AI 刷题 Android App。它�
 
 ## 下载
 
-最新版本：[Quiz-AI1.3预览版](https://github.com/Shaoming2445/Quiz-AI/releases)
+最新版本：[Quiz-AI1.3预览版](https://github.com/LiangJM666/Quiz-AI/releases)
