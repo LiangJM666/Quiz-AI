@@ -4,7 +4,7 @@ Quiz AI 是一款面向中文用户的本地优先 AI 刷题 Android App。它�
 
 ## 下载
 
-最新版本：[Quiz-AI1.3预览版](https://github.com/LiangJM666/Quiz-AI/releases)
+最新版本：[Quiz-AI1.0.0正式版](https://github.com/LiangJM666/Quiz-AI/releases)
 
 这是一个可以直接安装使用的中文刷题 App，名为 **Quiz AI，当前版本 1.0.0，minSdk 26 / targetSdk 37）。它把「用 AI 生成题目」「导入现成资料」「按题库练习」「错题复习」「学习统计」串成一条完整的学习流程；所有数据都存在本机，不需要自建服务器。
 
@@ -56,8 +56,6 @@ Quiz AI 是一款面向中文用户的本地优先 AI 刷题 Android App。它�
 ## 五、质量与构建
 
 - 单元/渲染测试：`:core` **39 个**、`:app` **50 个**（文字解析、Excel 三种模板、DOCX、三种协议与流式思考、API 地址归一化、存储与统计、各页面 Robolectric 渲染与交互流程），当前全部通过。
-- 截图由 Robolectric 直接渲染，输出在 `app/build/outputs/screenshots/`，README 里的图片就来自这里。
-- 命令行构建：`gradlew.bat :app:assembleDebug`，产物 `app/build/outputs/apk/debug/app-debug.apk`；仓库根也放了可直接安装的 [QuizAI-debug.apk](QuizAI-debug.apk)。
 
 ## 六、边界与限制
 
@@ -66,4 +64,3 @@ Quiz AI 是一款面向中文用户的本地优先 AI 刷题 Android App。它�
 - 纯本地单机：没有账号、云同步和多端同步；题库与错题不会跨设备。
 - 界面与题目面向中文内容设计，未做多语言。
 
-更完整的更新记录、截图和目录说明见 [README.md](README.md)。
