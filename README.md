@@ -1,12 +1,8 @@
-#测验-AI
-
-Quiz AI 是一款面向中文用户的本地优先 AI 刷题 Android App。它把「AI 出题、资料导入、题库管理、刷题、错题复习、学习统计」串成一条完整的学习闭环，界面采用浅色卡片风格，并配有悬浮导航、渐变主题和较多界面动效
-
 ## 下载
 
 最新版本：[Quiz-AI1.0.0正式版](https://github.com/LiangJM666/Quiz-AI/releases)
 
-这是一个可以直接安装使用的中文刷题 App，名为 **Quiz AI，当前版本 1.0.0，minSdk 26 / targetSdk 37）。它把「用 AI 生成题目」「导入现成资料」「按题库练习」「错题复习」「学习统计」串成一条完整的学习流程；所有数据都存在本机，不需要自建服务器。
+这是一个可以直接安装使用的中文刷题 App，名为 **Quiz AI。它把「用 AI 生成题目」「导入现成资料」「按题库练习」「错题复习」「学习统计」串成一条完整的学习流程；所有数据都存在本机，不需要自建服务器。
 
 ## 一、它解决的问题
 
@@ -37,7 +33,7 @@ Quiz AI 是一款面向中文用户的本地优先 AI 刷题 Android App。它�
 ## 三、AI 接口
 
 - 协议：OpenAI Chat Completions、OpenAI Responses、Anthropic Messages，可自动识别 URL 协议。
-- 预设：DeepSeek（`deepseek-flash`）、MiMo（`mimo-v2.6-pro`）、Qwen（`qwen4-max`）、智谱（`glm-5.3-flash`），四家都按支持识图配置；也支持完全自定义接口与模型名称。
+- 预设：DeepSeek（`deepseek-flash`)、MiMo(`mimo-v2.6-pro`）、Qwen（`qwen4-max`)、智谱(`glm-5.3-flash`），四家都按支持识图配置；也支持完全自定义接口与模型名称。
 - 「测试连接」会逐个协议发一条极小请求，逐行报告可用性；对 GLM5.3 Flash 这类先思考后回答的模型会留足 token，并把思考通道内容当成功。
 - 每个服务商的 Key 分开保存，切换服务商不会清空已填内容；Key 只存本机。
 
@@ -45,17 +41,17 @@ Quiz AI 是一款面向中文用户的本地优先 AI 刷题 Android App。它�
 
 | 项目 | 说明 |
 | --- | --- |
-| 语言/UI | Java 17，Android 原生 View + XML + Drawable + ValueAnimator |
-| 架构 | 8 个 Gradle 模块：`:app`、`:core`、`:navigation`、5 个 `:feature:*`，单向依赖，页面只通过 `PageHost` 通信 |
+| 语言/UI |Java17、Android原生查看+XML+可绘制+ValueAnimator|
+| 架构 | 8 个 Gradle 模块：`：app`、`:core`、`:navigation`、5 个 `：功能：*`，单向依赖，页面只通过 `PageHost` 通信 |
 | 第三方依赖 | 运行时零第三方库；网络用 `HttpURLConnection` + `org.json`，Excel/Word 解析自研（ZIP + DOM/SAX） |
 | 存储 | SharedPreferences（资料/API/统计）+ 应用私有 JSON（题库、错题），题库保存原始文本、打开时重新解析 |
 | 数据量 | 单次导入/生成最多 50 题，每日统计保留 120 天 |
 
 设计系统集中在 `:core`：一套颜色/字符串/Drawable/样式，6 套主题色板通过主题属性下发，`Anim` 动效库统一处理进场、按压、脉冲、抖动、展开、切页，并在 Robolectric 环境自动降级，保证截图稳定。
 
-## 五、质量与构建
+：点选即判；答对默认自动下一题（可在设置改成停留看解析），答错抖动并展开解析。判断题只有「正确/错误」两个大按钮；填空题在答题页直接输入答案并自动比对（支持多个可接受答案）。结果页有分数滚动、达标彩纸，无标准答案的题以「待核对」模式练习、不计入正确率。 五、质量与构建
 
-- 单元/渲染测试：`:core` **39 个**、`:app` **50 个**（文字解析、Excel 三种模板、DOCX、三种协议与流式思考、API 地址归一化、存储与统计、各页面 Robolectric 渲染与交互流程），当前全部通过。
+- 单元/渲染测试：`:core` **39 个**、`：app` **50 个**（文字解析、Excel 三种模板、DOCX、三种协议与流式思考、API 地址归一化、存储与统计、各页面 Robolectric 渲染与交互流程），当前全部通过。
 
 ## 六、边界与限制
 
